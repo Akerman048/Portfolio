@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { Fade, Slide, Zoom } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 import s from "./StackSlider.module.css";
 import { collection, getDocs } from "firebase/firestore";
@@ -41,7 +41,7 @@ export default function StackSlider() {
             />
           </li></Zoom>
         ))}
-        {stackIcons.map(([name, url], i) => (
+        {stackIcons.map(([name, url]) => (
           <li className={s.stackIconsWrap} key={name + "-copy"} title={name}>
             <img
             

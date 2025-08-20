@@ -1,12 +1,11 @@
 import React from "react";
-import { Fade, Slide, Zoom } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 import BlockTitle from "../BlockTitle/BlockTitle";
 import s from "./Projects.module.css";
 import projects from "../../data/projects.json";
 import { IoMdOpen } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const DIRS = ["left", "up", "right"] as const; // порядок напрямків
 
 export default function Projects() {
   return (

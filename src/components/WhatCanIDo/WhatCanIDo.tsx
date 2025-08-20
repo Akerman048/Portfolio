@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import s from "./WhatCanIDo.module.css";
 
 import { Fade } from "react-awesome-reveal";

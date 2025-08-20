@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import s from "./Contact.module.css";
 
-import { Fade, Slide, Zoom } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 import emailjs from "@emailjs/browser";
 

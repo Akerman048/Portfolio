@@ -75,7 +75,7 @@ export default function About() {
     return () => clearInterval(interval);
   }, []);
 
-  const currentItem = detailsData[index];
+
 
   return (
     <section id='about' className={s.wrap}>
