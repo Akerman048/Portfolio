@@ -1,4 +1,3 @@
-// Navigation.tsx
 import s from "./Navigation.module.css";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink, useLocation } from "react-router-dom";
@@ -13,25 +12,18 @@ export default function Navigation() {
         {label}
       </ScrollLink>
     ) : (
-      <RouterLink className={s.link} to={{ pathname: "/", hash: `#${to}` }}>
+      // передаємо цільову секцію через state
+      <RouterLink className={s.link} to="/" state={{ scrollTo: to }}>
         {label}
       </RouterLink>
     );
 
   return (
     <ul className={s.links}>
-      <li>
-        <Item to='home' label='Home' />
-      </li>
-      <li>
-        <Item to='about' label='About' />
-      </li>
-      <li>
-        <Item to='projects' label='Portfolio' />
-      </li>
-      <li>
-        <Item to='contact' label='Contact' />
-      </li>
+      <li><Item to="home" label="Home" /></li>
+      <li><Item to="about" label="About" /></li>
+      <li><Item to="projects" label="Portfolio" /></li>
+      <li><Item to="contact" label="Contact" /></li>
     </ul>
   );
 }
