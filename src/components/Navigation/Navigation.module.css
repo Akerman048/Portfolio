@@ -1,0 +1,11 @@
+.links {
+    display: flex;
+    
+    gap: 15px;
+  }
+  
+  .link {
+    font-weight: 700;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,351 @@
+.contact {
+  display: flex;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.contact__wrap {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bgSmooth);
+  transition: 0.3s;
+  padding: 30px;
+  border-radius: 30px;
+  gap: 40px;
+
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+  border: 1px solid rgba(128, 128, 128, 0);
+}
+
+.contact__form:hover .contact__formTitleIcon {
+  animation: iconAnimation 0.5s ease-in-out;
+}
+
+.contact__form:hover {
+  border: 1px solid rgba(27, 18, 156, 0.305);
+  box-shadow: -1px 1px 23px 6px rgba(159, 197, 255, 0.55);
+  -webkit-box-shadow: -1px 1px 23px 6px rgba(159, 197, 255, 0.55);
+  -moz-box-shadow: -1px 1px 23px 6px rgba(159, 197, 255, 0.55);
+}
+
+:global(body.dark) .contact__form:hover {
+  border: 1px solid rgba(50, 204, 251, 0.097);
+  box-shadow: -1px 1px 23px 6px rgba(0, 48, 122, 0.55);
+  -webkit-box-shadow: -1px 1px 23px 6px rgba(0, 48, 122, 0.55);
+  -moz-box-shadow: -1px 1px 23px 6px rgba(0, 48, 122, 0.55);
+}
+
+@keyframes iconAnimation {
+  0% {
+    transform: rotateY(0deg) scale(1);
+  }
+  100% {
+    transform: rotateY(360deg) scale(1);
+  }
+}
+
+.contact__formtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+  background: var(--blockTitlecolor);
+  font-weight: 800;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact__formSubTitle {
+  font-size: 20px;
+}
+
+.contact__formTitleIcon {
+  color: rgb(4, 57, 136);
+  display: inline-block; /* щоб transform застосовувався коректно */
+  transform-origin: center; /* центр обертання */
+  will-change: transform;
+}
+
+:global(body.dark) .contact__formTitleIcon {
+  color: rgb(61, 61, 246);
+}
+
+.contact__formField {
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--darkBgAccentHover);
+  resize: none;
+}
+
+.contact__submit {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-width: 200px;
+  max-width: 300px;
+  height: 50px;
+  background: var(--darkBgAccentHover);
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.contact__submit:hover {
+  background: var(--linkhover);
+  color: aliceblue;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.contact__submitIcon {
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.contact__submit:hover .contact__submitIcon {
+  transform: scale(0.8);
+}
+
+.contact__submit:active {
+  transform: translateY(0) scale(0.99);
+}
+
+/* SOCIALS */
+
+.revealFlex {
+  display: flex;
+  flex: 1;
+} /* замість inline-block */
+.contact_Link {
+  width: 100%;
+  display: flex;
+}
+
+.contact__socialsTitle {
+  font-size: 32px;
+}
+
+.contact__socialLnkd {
+  background-color: rgba(91, 126, 252, 0.248);
+}
+
+.contact__gitHub {
+  background-color: rgba(130, 130, 130, 0.333);
+}
+
+.contact__inst {
+  background-color: rgba(255, 64, 64, 0.147);
+}
+
+.contact__lnkdnWrap,
+.contact__gitHubWrap,
+.contact__instWrap {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.contact__lnkdnWrap::after,
+.contact__gitHubWrap:after,
+.contact__instWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(190, 213, 245, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: -1;
+  transform: skewX(-25deg);
+}
+
+.contact__lnkdnWrap:hover::after,
+.contact__gitHubWrap:hover:after,
+.contact__instWrap:hover::after {
+  animation: shine 0.6s forwards;
+}
+
+.contact__lnkdnWrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 133, 249, 0.17) 0%,
+    rgba(63, 139, 245, 0.4) 50%,
+    rgba(0, 133, 249, 0.17) 100%
+  );
+  opacity: 0;
+  transform: skewX(-25deg);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.contact__lnkdnWrap:hover::before {
+  opacity: 1;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+.contact__socials {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+  gap: 30px;
+  min-width: 300px;
+  width: 50%;
+}
+
+.contact__socialLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  background: var(--bgSmooth);
+}
+
+.contact__socialLink:hover {
+  color: aliceblue;
+}
+
+.contact__socialLink:hover .contact__socialIcon {
+  transform: scale(1.1);
+}
+
+.contact__socialLnkd {
+  color: rgb(0, 89, 255);
+}
+
+.contact__socialIcon {
+  font-size: 62px;
+  transition: 0.3s;
+
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.contact_paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-weight: 900;
+  gap: 5px;
+}
+
+.contact_paragraph span {
+  font-weight: 400;
+}
+
+.socilaBlockWrap {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* .contact_Link {
+  
+  width: 50%;
+} */
+
+/* GITHUB*/
+
+.contact__gitHubWrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(139, 139, 139, 0.259) 0%,
+    rgba(159, 159, 159, 0.4) 50%,
+    rgba(161, 161, 161, 0.17) 100%
+  );
+  opacity: 0;
+  transform: skewX(-25deg);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.contact__gitHubWrap:hover::before {
+  opacity: 1;
+}
+
+/* INST */
+.contact__instWrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(254, 54, 204, 0.17) 0%,
+    rgba(245, 63, 90, 0.4) 50%,
+    rgba(254, 54, 254, 0.17) 100%
+  );
+  opacity: 0;
+  transform: skewX(-25deg);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.contact__instWrap:hover::before {
+  opacity: 1;
+}
+
+.contact__inst {
+  color: rgb(178, 34, 111);
+}
+
+/* MEDIA REQUESTS */
+
+@media screen and (max-width: 1100px) {
+  .contact__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .contact__form {
+    max-width: 80%;
+  }
+
+  .contact__socials {
+    width: 80%;
+  }
+}

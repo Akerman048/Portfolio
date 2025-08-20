@@ -1,0 +1,35 @@
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+
+  background: transparent;
+  backdrop-filter: none;
+  
+  -webkit-backdrop-filter: blur(10px);
+  transition: background .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
+
+}
+
+.header.scrolled{
+  background: var(--navBg);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 10px;
+  height: 80px;
+  z-index: 100;
+  position: relative;
+}
+
+.rightBlock {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}

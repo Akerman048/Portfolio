@@ -1,0 +1,113 @@
+[
+  {
+    "id": "dzamilla-tyminska",
+    "title": "Dżamilla Tymińska",
+    "year": 2025,
+    "technologies": ["React", "Firebase", "HTML", "CSS"],
+    "description": "A dynamic, responsive React portfolio powered by Firebase, featuring a built-in admin panel for live customization—change fonts, backgrounds, and text styling; add, edit, or remove works; includes handcrafted two-layer sliders and background images that react to mouse movement—all without touching code.",
+
+    "cover": "/projectPreviews/DzamillaTyminska.jpg",
+    "links": {
+      "link": "https://dzamillaphotography.com",
+      "repo": "https://github.com/Akerman048/dzamilla_tyminska"
+    },
+    "featured": true,
+    "order": 1,
+    "keyFeatures": [
+      "Using Firebase, the admin can update photos, titles, descriptions, fonts, text styles, and overall styling—changes are saved instantly and reflected in real time.",
+      "Users can add, edit, or delete works and entire site sections entirely from the browser—no need to touch code.",
+      "A handcrafted slider splits text into two lines. As new content is added, rows dynamically appear to the right, creating a clean, engaging scrolling effect.",
+      "The site is built with React and adapts smoothly to all device sizes—from mobile phones to high-resolution desktops.",
+      "Background images respond subtly to mouse movement, adding a layer of interactive depth and visual appeal."
+    ]
+  },
+  {
+    "id": "flower-lover",
+    "title": "Flower lover",
+    "year": 2025,
+    "technologies": ["React", "CSS", "HTML"],
+    "description": "This is a modern, responsive React-powered flower shop interface featuring a multi-criteria product filter. Users can refine selections by category, color, price, or occasion—and even apply multiple filters at once for precise results. The sleek design and immediate, client-side filtering create a seamless shopping experience.",
+    "cover": "/projectPreviews/FlowerLower.jpg",
+    "links": {
+      "link": "https://akerman048.github.io/flower-lover/#home",
+      "repo": "https://github.com/Akerman048/flower-lover"
+    },
+    "featured": true,
+    "order": 1,
+    "keyFeatures": [
+      "Built with React for a modern, responsive interface that adapts seamlessly to all devices.",
+      "Multi-criteria filtering system—refine products by category, color, price, or occasion.",
+      "Supports applying multiple filters at once for precise and flexible product discovery.",
+      "Instant, client-side filtering ensures smooth performance without page reloads.",
+      "Clean, elegant design optimized for a seamless and enjoyable shopping experience."
+    ]
+    
+  },
+  {
+    "id": "malgorzata-porazewska",
+    "title": "Małgorzata Porażewska",
+    "year": 2025,
+    "technologies": ["JavaScript", "Firebase", "HTML", "CSS"],
+    "description": "A fully customizable portfolio powered by Firebase, featuring an admin panel for real-time edits. Easily change fonts, colors, text styles, and backgrounds, as well as add, edit, or remove works and entire site sections—no code required, all directly from the browser.",
+    "cover": "/projectPreviews/malgorzataporazewska.jpg",
+    "links": {
+      "link": "https://malgorzataporazewska.web.app/",
+      "repo": "https://github.com/Akerman048/MalgorzataPorazewska"
+    },
+    "featured": true,
+    "order": 1,
+    "keyFeatures": [
+      "Powered by Firebase with an integrated admin panel for real-time edits and updates.",
+      "Easily customize fonts, colors, text styles, and backgrounds directly from the browser—no coding required.",
+      "Add, edit, or remove works and entire site sections with instant, seamless publishing.",
+      "Fully responsive layout that adapts smoothly across mobile, tablet, and desktop devices.",
+      "Clean, modern design that highlights creative work while staying easy to maintain."
+    ]
+    
+  },
+  {
+    "id": "Explore-Indonesia",
+    "title": "Explore Indonesia",
+    "year": 2024,
+    "technologies": ["React", "TypeScript", "HTML", "CSS"],
+    "description": "Responsive React + TypeScript website with a dynamic slider, interactive gallery, and adaptive YouTube video embeds. Features a modern burger menu on small screens, ensuring smooth navigation and a seamless user experience across all devices.",
+    "cover": "/projectPreviews/ExploreIndonesia.jpg",
+    "links": {
+      "link": "https://akerman048.github.io/explore-indonesia/",
+      "repo": "https://github.com/Akerman048/explore-indonesia"
+    },
+    "featured": true,
+    "order": 1,
+    "keyFeatures": [
+      "Developed with React and TypeScript for scalable, maintainable, and high-performance code.",
+      "Fully responsive design that ensures a seamless experience across all devices and screen sizes.",
+      "Dynamic slider and interactive gallery to showcase content in an engaging, user-friendly way.",
+      "Embedded YouTube videos adapt automatically to screen size while preserving correct proportions.",
+      "Modern burger menu enhances navigation on smaller screens with a clean, intuitive interface."
+    ]
+    
+  },
+
+  {
+    "id": "YourMeal",
+    "title": "YourMeal",
+    "year": 2024,
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "description": "A flexible restaurant delivery website built with plain JavaScript and a connected database. It features intuitive product cards, an instantly updating shopping cart, and quick category filtering.",
+    "cover": "/projectPreviews/YourMeal.jpg",
+    "links": {
+      "link": "https://akerman048.github.io/YourMeal/",
+      "repo": "https://github.com/Akerman048/YourMeal"
+    },
+    "featured": true,
+    "order": 1,
+    "keyFeatures": [
+      "Built with plain JavaScript and a connected database for fast performance and reliable data handling.",
+      "Responsive design that adapts smoothly to mobile, tablet, and desktop devices.",
+      "Intuitive product cards display images, descriptions, and prices for a clear shopping experience.",
+      "Instantly updating shopping cart keeps users informed in real time without page reloads.",
+      "Quick category filtering allows users to find dishes by type, price, or tags efficiently."
+    ]
+    
+  }
+]

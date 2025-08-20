@@ -1,0 +1,50 @@
+:root {
+  --bg: linear-gradient(-45deg, #cbe4ff, #9595ff7d, #bde6ff, #7da2ffb0);
+  --bgSmooth: linear-gradient(30deg, #7cb3fc6e, #7077ee77, #033adf7c);
+  --bgSmoothHover: linear-gradient(30deg, #7cb3fcb5, #7076eeb4, #033adfb0);
+  --bodyText: #111;
+  --blockTitlecolor: linear-gradient(
+    -45deg,
+    #1b77d9,
+    #222276,
+    #07639c,
+    #225bea
+  );
+  --lightTextColor: azure;
+  --lightColor: #08094e;
+  --darkTextColor: #18184e;
+  --darkBgAccent: #0751ff4c;
+  --darkBgAccentHover: #0854ed8f;
+  --linkhover: #0110528f;
+  --bgGradient: linear-gradient(90deg, #094ea7, #60a5ff, #3366ff);
+--navBg: rgba(213, 233, 255, 0.108);
+}
+
+body.dark {
+  --bg: linear-gradient(-45deg, #212163, #0f0429, #102543, #130e28, #3e5090);
+  --bgSmooth: linear-gradient(
+    -45deg,
+    #17176972,
+    #21216367,
+    #1414599a,
+    #09094796,
+    #14145991
+  );
+  --bgSmoothHover: linear-gradient(
+    -45deg,
+    #171769a9,
+    #21216399,
+    #141459,
+    #090947b4,
+    #141459b1
+  );
+  --bodyText: #fff;
+  --lightColor: rgb(222, 231, 254);
+  --blockTitlecolor: linear-gradient(40deg, #47a9ff, #3426f5, #006dc1, #8114d9);
+  --darkTextColor: #dce9ff;
+  --darkBgAccent: #0114418f;
+  --darkBgAccentHover: #052f918f;
+  --linkhover: #9797f7;
+  --bgGradient: linear-gradient(90deg, #46038a, #03247f, #6c05a8, #41047e);
+  --navBg: rgba(3, 32, 62, 0.108);
+}
