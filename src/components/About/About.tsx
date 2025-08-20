@@ -66,7 +66,7 @@ const detailsData = [
 ];
 
 export default function About() {
-  const [index, setIndex] = useState(0);
+  const [,setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
