@@ -6,7 +6,7 @@
     "technologies": ["React", "Firebase", "HTML", "CSS"],
     "description": "A dynamic, responsive React portfolio powered by Firebase, featuring a built-in admin panel for live customization—change fonts, backgrounds, and text styling; add, edit, or remove works; includes handcrafted two-layer sliders and background images that react to mouse movement—all without touching code.",
 
-    "cover": "/projectPreviews/DzamillaTyminska.jpg",
+    "cover": "projectPreviews/DzamillaTyminska.jpg",
     "links": {
       "link": "https://dzamillaphotography.com",
       "repo": "https://github.com/Akerman048/dzamilla_tyminska"
@@ -27,7 +27,7 @@
     "year": 2025,
     "technologies": ["React", "CSS", "HTML"],
     "description": "This is a modern, responsive React-powered flower shop interface featuring a multi-criteria product filter. Users can refine selections by category, color, price, or occasion—and even apply multiple filters at once for precise results. The sleek design and immediate, client-side filtering create a seamless shopping experience.",
-    "cover": "/projectPreviews/FlowerLower.jpg",
+    "cover": "projectPreviews/FlowerLower.jpg",
     "links": {
       "link": "https://akerman048.github.io/flower-lover/#home",
       "repo": "https://github.com/Akerman048/flower-lover"
@@ -49,7 +49,7 @@
     "year": 2025,
     "technologies": ["JavaScript", "Firebase", "HTML", "CSS"],
     "description": "A fully customizable portfolio powered by Firebase, featuring an admin panel for real-time edits. Easily change fonts, colors, text styles, and backgrounds, as well as add, edit, or remove works and entire site sections—no code required, all directly from the browser.",
-    "cover": "/projectPreviews/malgorzataporazewska.jpg",
+    "cover": "projectPreviews/malgorzataporazewska.jpg",
     "links": {
       "link": "https://malgorzataporazewska.web.app/",
       "repo": "https://github.com/Akerman048/MalgorzataPorazewska"
@@ -71,7 +71,7 @@
     "year": 2024,
     "technologies": ["React", "TypeScript", "HTML", "CSS"],
     "description": "Responsive React + TypeScript website with a dynamic slider, interactive gallery, and adaptive YouTube video embeds. Features a modern burger menu on small screens, ensuring smooth navigation and a seamless user experience across all devices.",
-    "cover": "/projectPreviews/ExploreIndonesia.jpg",
+    "cover": "projectPreviews/ExploreIndonesia.jpg",
     "links": {
       "link": "https://akerman048.github.io/explore-indonesia/",
       "repo": "https://github.com/Akerman048/explore-indonesia"
@@ -94,7 +94,7 @@
     "year": 2024,
     "technologies": ["JavaScript", "HTML", "CSS"],
     "description": "A flexible restaurant delivery website built with plain JavaScript and a connected database. It features intuitive product cards, an instantly updating shopping cart, and quick category filtering.",
-    "cover": "/projectPreviews/YourMeal.jpg",
+    "cover": "projectPreviews/YourMeal.jpg",
     "links": {
       "link": "https://akerman048.github.io/YourMeal/",
       "repo": "https://github.com/Akerman048/YourMeal"

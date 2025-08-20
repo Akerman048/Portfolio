@@ -35,7 +35,7 @@ export default function Projects() {
               <div className={s.projects__item}>
                 <div className={s.imageContainer}>
                   <img
-                    src={project.cover}
+                   src={`${import.meta.env.BASE_URL}${project.cover}`}
                     className={s.projects__image}
                     alt={project.title}
                     loading="lazy"

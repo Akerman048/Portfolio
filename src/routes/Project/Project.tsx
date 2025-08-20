@@ -48,7 +48,7 @@ export default function Project() {
           {" "}
           <div className={s.project__coverWrap}>
             <img
-              src={project.cover}
+             src={`${import.meta.env.BASE_URL}${project.cover}`}
               alt={project.title}
               className={s.project__cover}
             />
