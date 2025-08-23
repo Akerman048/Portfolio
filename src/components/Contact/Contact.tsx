@@ -29,7 +29,7 @@ export default function Contact() {
 
   const [error, setError] = useState("");
 
-  const [isWide, setIsWide] = useState(window.innerWidth > 768);
+  const [, setIsWide] = useState(window.innerWidth > 768);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
