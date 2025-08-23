@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Contact.module.css";
 
 import { Fade, Zoom } from "react-awesome-reveal";
@@ -22,10 +22,14 @@ export default function Contact() {
     email: "",
     message: "",
   });
+
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">(
     "idle"
   );
+
   const [error, setError] = useState("");
+
+  const [isWide, setIsWide] = useState(window.innerWidth > 768);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -58,6 +62,13 @@ export default function Contact() {
       setError(err.message || "Failed to send");
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => setIsWide(window.innerWidth > 768);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <section id='contact' className={s.contact}>
       <div className={s.contact__wrap}>
@@ -156,9 +167,11 @@ export default function Contact() {
                 <FaGithub
                   className={`${s.contact__socialIcon} ${s.contact__gitHub}`}
                 />
-                <p className={s.contact_paragraph}>
-                  GitHub <span>@Akerman048</span>
-                </p>
+                {window.innerWidth > 768 && (
+                  <p className={s.contact_paragraph}>
+                    GitHub <span>@Akerman048</span>
+                  </p>
+                )}
               </a>
             </Fade>
             <Fade
@@ -175,9 +188,11 @@ export default function Contact() {
                 <FaInstagram
                   className={`${s.contact__socialIcon} ${s.contact__inst}`}
                 />
-                <p className={s.contact_paragraph}>
-                  Instagram <span>@Akerman.048</span>
-                </p>
+                {window.innerWidth > 768 && (
+                  <p className={s.contact_paragraph}>
+                    Instagram <span>@Akerman.048</span>
+                  </p>
+                )}
               </a>
             </Fade>
           </div>

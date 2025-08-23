@@ -1,58 +1,67 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import * as THREE from "three";
 import FOG from "vanta/dist/vanta.fog.min";
-import { useTheme } from "../../context/ThemeContext"; // імпорт контексту
+import { useTheme } from "../../context/ThemeContext";
 
-const VantaFog = () => {
-  const ref = useRef(null);
-  const [vantaEffect, setVantaEffect] = useState<any>(null);
-  const { theme } = useTheme(); // витягуємо тему
+export default function VantaFog() {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [vanta, setVanta] = useState<any>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
-    // Очистити попередній ефект
-    if (vantaEffect) {
-      vantaEffect.destroy();
-      setVantaEffect(null);
-    }
+    if (!ref.current) return;
 
-    if (ref.current) {
-      const effect = FOG({
-        el: ref.current,
-        THREE,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200,
-        minWidth: 200,
-        highlightColor: theme === "light" ? 0xbcc3ff : 0x3b0787,
-        midtoneColor: theme === "light" ? 0xbee8ff : 0x50950,
-        lowlightColor: theme === "light" ? 0xa0a0ff : 0x2f045f,
-        baseColor: theme === "light" ? 0xffffff : 0x0,
-        blurFactor: 0.62,
-        speed: 1.7,
-      });
+    // знищуємо попередній інстанс
+    vanta?.destroy?.();
 
-      setVantaEffect(effect);
-    }
+    const effect = FOG({
+      el: ref.current,
+      THREE,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200,
+      minWidth: 200,
+      highlightColor: theme === "light" ? 0xbcc3ff : 0x3b0787,
+      midtoneColor:  theme === "light" ? 0xbee8ff : 0x050950, // виправлений hex
+      lowlightColor: theme === "light" ? 0xa0a0ff : 0x2f045f,
+      baseColor:     theme === "light" ? 0xffffff : 0x000000,
+      blurFactor: 0.62,
+      speed: 1.7,
+    });
+    setVanta(effect);
+
+    const onResize = () => effect?.resize?.();
+
+    // слухачі для всіх кейсів мобільного viewport’а
+    window.addEventListener("resize", onResize);
+    window.addEventListener("orientationchange", onResize);
+    const vv = (window as any).visualViewport;
+    vv?.addEventListener("resize", onResize);
+    vv?.addEventListener("scroll", onResize);
 
     return () => {
-      if (vantaEffect) vantaEffect.destroy();
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("orientationchange", onResize);
+      vv?.removeEventListener("resize", onResize);
+      vv?.removeEventListener("scroll", onResize);
+      effect.destroy();
     };
-  }, [theme]); // <-- додали theme як залежність
+  }, [theme]); // оновлюємо при зміні теми
 
-  return (
+  // МОНТУЄМО ПРЯМО В <body>, щоб жоден предок не «ламав» fixed
+  return createPortal(
     <div
-      ref={ref}
-      style={{
-        width: "100%",
-        height: "100%",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        zIndex: -1,
+    ref={ref}
+    style={{
+      position: "fixed",
+      inset: 0,            // покриває весь в’юпорт
+      pointerEvents: "none",
+      overflow: "hidden",
+      zIndex: 0,
       }}
-    ></div>
+    />,
+    document.body
   );
-};
-
-export default VantaFog;
+}

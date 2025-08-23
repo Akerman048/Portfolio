@@ -1,8 +1,10 @@
 @import "./styles/variables.css";
-
-html{
-  height: 100%;
+html, body { width: 100%; max-width: 100%; }
+html, body { overflow-x: hidden; }          /* fallback */
+@supports (overflow-x: clip) {
+  html, body { overflow-x: clip; }          /* сучасніше, без зайвих лейаутів */
 }
+#root { overflow-x: clip; }
 
 #root {
   width: 100%;
@@ -23,6 +25,7 @@ body {
 
   /* height: 100vh; */
   width: 100%;
+  
 }
 
 body.light {
@@ -48,3 +51,10 @@ a {
 a:hover {
   color: var(--linkhover);
 }
+
+/* щоб фон був позаду всього */
+html, body { min-height: 100%; }
+body { background: transparent; }
+
+/* ваш основний контейнер/контент має бути вище */
+#root, main { position: relative; z-index: 1; }

@@ -3,6 +3,7 @@
   --bgSmooth: linear-gradient(30deg, #7cb3fc6e, #7077ee77, #033adf7c);
   --bgSmoothHover: linear-gradient(30deg, #7cb3fcb5, #7076eeb4, #033adfb0);
   --bodyText: #111;
+  --bgBurger: linear-gradient(-45deg, #b4d8ff, #a3d0fd,#7cbdfe);
   --blockTitlecolor: linear-gradient(
     -45deg,
     #1b77d9,
@@ -17,7 +18,7 @@
   --darkBgAccentHover: #0854ed8f;
   --linkhover: #0110528f;
   --bgGradient: linear-gradient(90deg, #094ea7, #60a5ff, #3366ff);
---navBg: rgba(213, 233, 255, 0.108);
+  --navBg: rgba(213, 233, 255, 0.108);
 }
 
 body.dark {
@@ -39,6 +40,7 @@ body.dark {
     #141459b1
   );
   --bodyText: #fff;
+  --bgBurger: linear-gradient(-55deg, #00070d, rgb(0, 10, 25),#00162e);
   --lightColor: rgb(222, 231, 254);
   --blockTitlecolor: linear-gradient(40deg, #47a9ff, #3426f5, #006dc1, #8114d9);
   --darkTextColor: #dce9ff;

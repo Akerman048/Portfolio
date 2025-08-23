@@ -1,35 +1,60 @@
 .header {
-  width: 100%;
   position: sticky;
   top: 0;
   z-index: 10000;
-
   background: transparent;
   backdrop-filter: none;
-  
-  -webkit-backdrop-filter: blur(10px);
-  transition: background .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
-
+  -webkit-backdrop-filter: none;
+  transition: background 0.25s ease, box-shadow 0.25s ease,
+    backdrop-filter 0.25s ease, -webkit-backdrop-filter 0.25s ease;
+  transform: translateZ(0); /* фікс композитинга в iOS */
 }
-
-.header.scrolled{
-  background: var(--navBg);
+.header.scrolled {
+  background: var(--navBg, rgba(16, 16, 24, 0.6));
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
-
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  padding: 20px 10px;
   height: 80px;
-  z-index: 100;
-  position: relative;
+  padding: 20px 10px;
 }
-
 .rightBlock {
   display: flex;
   gap: 40px;
   align-items: center;
+}
+
+.desktopOnly {
+  display: inline-flex;
+}
+@media (max-width: 768px) {
+  .desktopOnly {
+    display: none;
+  }
+}
+
+.headerBurger {
+  display: none;
+}
+.burgerBar {
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+}
+@media (max-width: 768px) {
+  .headerBurger {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    z-index: 1100;
+  }
 }

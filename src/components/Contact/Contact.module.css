@@ -128,7 +128,7 @@
 .revealFlex {
   display: flex;
   flex: 1;
-} /* замість inline-block */
+}
 .contact_Link {
   width: 100%;
   display: flex;
@@ -188,7 +188,7 @@
   position: absolute;
   top: 0;
   left: -10;
-  width: 120%;
+  width: 130%;
   height: 100%;
   background: linear-gradient(
     120deg,
@@ -285,7 +285,7 @@
   position: absolute;
   top: 0;
   left: -10;
-  width: 120%;
+  width: 130%;
   height: 100%;
   background: linear-gradient(
     120deg,
