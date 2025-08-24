@@ -5,10 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
-type Props = {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-};
+type Props = { open: boolean; onOpenChange: (open: boolean) => void; };
 
 export default function Navigation({ open, onOpenChange }: Props) {
   const { pathname } = useLocation();
@@ -28,10 +25,17 @@ export default function Navigation({ open, onOpenChange }: Props) {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  // Портал: рендеримо мобільне меню у <body>
   return (
     <>
-      {/* (опційно) тут можна залишити десктопне горизонтальне меню */}
+      {/* === ДЕСКТОПНЕ МЕНЮ (інлайн, по центру хедера) === */}
+      <ul className={s.desktopMenu} aria-label="Primary">
+        <li><Item to="home" label="Home" /></li>
+        <li><Item to="about" label="About" /></li>
+        <li><Item to="projects" label="Portfolio" /></li>
+        <li><Item to="contact" label="Contact" /></li>
+      </ul>
+
+      {/* === МОБІЛЬНЕ МЕНЮ (портал у <body>) === */}
       {createPortal(
         <div
           className={`${s.overlay} ${open ? s.show : ""}`}
@@ -44,7 +48,6 @@ export default function Navigation({ open, onOpenChange }: Props) {
                       onClick={() => onOpenChange(false)}>✕</button>
               <ThemeToggle />
             </div>
-
             <ul className={s.menu} id="main-menu">
               <li><Item to="home" label="Home" /></li>
               <li><Item to="about" label="About" /></li>

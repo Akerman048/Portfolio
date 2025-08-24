@@ -12,6 +12,7 @@
     #225bea
   );
   --lightTextColor: azure;
+  --brightBtn: #18184e;
   --lightColor: #08094e;
   --darkTextColor: #18184e;
   --darkBgAccent: #0751ff4c;
@@ -42,6 +43,7 @@ body.dark {
   --bodyText: #fff;
   --bgBurger: linear-gradient(-55deg, #00070d, rgb(0, 10, 25),#00162e);
   --lightColor: rgb(222, 231, 254);
+  --brightBtn: #18184e;
   --blockTitlecolor: linear-gradient(40deg, #47a9ff, #3426f5, #006dc1, #8114d9);
   --darkTextColor: #dce9ff;
   --darkBgAccent: #0114418f;

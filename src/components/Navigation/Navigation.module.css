@@ -1,74 +1,45 @@
 .link { font-weight: 700; cursor: pointer; }
 
-/* Оверлей над усім (вище за header z-index:10000) */
-.overlay {
-  position: fixed;
-  inset: 0;
-  opacity: 0;
-  pointer-events: none;
-  background: rgba(0,0,0,.35);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  transition: opacity .25s ease, backdrop-filter .25s ease, -webkit-backdrop-filter .25s ease;
-  z-index: 20000;             /* ВИЩЕ за хедер */
-  overflow: hidden;           /* щоб sheet не створював X-скрол */
-  will-change: opacity;
-  backface-visibility: hidden;
+/* десктопне горизонтальне меню — по центру (Header робить центр реально центром) */
+.desktopMenu {
+  display: none;
+  list-style: none;
+  gap: 28px;
+  align-items: center;
+  justify-content: center; /* на випадок, якщо контейнер ширший */
 }
-.show {
-  opacity: 1;
-  pointer-events: auto;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+@media (min-width: 769px) {
+  .desktopMenu { display: flex; }
 }
 
-/* Рухома панель */
+/* ---- мобільне меню (overlay + sheet) залишається як у тебе ---- */
+.overlay {
+  position: fixed; inset: 0; opacity: 0; pointer-events: none;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+  transition: opacity .25s ease, backdrop-filter .25s ease, -webkit-backdrop-filter .25s ease;
+  z-index: 20000; overflow: hidden; will-change: opacity; backface-visibility: hidden;
+}
+.show { opacity: 1; pointer-events: auto; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+
 .sheet {
   position: absolute;
-  top: max(12px, env(safe-area-inset-top));   /* не залазити під “чолку” */
+  top: max(12px, env(safe-area-inset-top));
   right: max(12px, env(safe-area-inset-right));
   bottom: max(12px, env(safe-area-inset-bottom));
   width: min(86%, 360px);
   background: var(--navBg, rgba(16,16,24,.6));
   box-shadow: -12px 0 30px rgba(0,0,0,.25);
   border-radius: 16px 0 0 16px;
-
   transform: translate3d(110%,0,0);
   transition: transform .3s ease;
-  display: flex;
-  flex-direction: column;
-  padding: 16px 20px;
-
-  will-change: transform;
-  backface-visibility: hidden;
+  display: flex; flex-direction: column; padding: 16px 20px;
+  will-change: transform; backface-visibility: hidden;
 }
 .show .sheet { transform: translate3d(0,0,0); }
 
-.drawerTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-.closeButton {
-  appearance: none;
-  background: none;
-  border: 0;
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-}
+.drawerTop { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.closeButton { appearance:none; background:none; border:0; font-size:24px; line-height:1; cursor:pointer; }
+.menu { list-style:none; padding:0; margin:8px 0 0; display:flex; flex-direction:column; gap:14px; }
 
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-/* На десктопі це меню не показуємо (або покажи інше горизонтальне) */
-@media (min-width: 769px) {
-  .overlay { display: none; }
-}
+@media (min-width: 769px) { .overlay { display: none; } }

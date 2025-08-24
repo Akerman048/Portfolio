@@ -119,7 +119,7 @@ export default function About() {
                 <IoDocumentTextOutline className={s.icon} />
                 Download CV
               </a>
-              <a href='/#projects' className={s.button}>
+              <a href='/#projects' className={`${s.button} ${s.secondary}`}>
                 <FaCode className={s.icon} />
                 View projects
               </a>

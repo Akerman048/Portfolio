@@ -160,7 +160,7 @@ export default function Contact() {
               className={s.revealFlex}
             >
               <a
-                href='https://www.linkedin.com/in/valerii-oleksiienko-b50562330/'
+                href='https://github.com/Akerman048'
                 className={`${s.contact_Link} ${s.contact__socialLink} ${s.contact__gitHubWrap}`}
                 target='_blank'
               >

@@ -114,6 +114,10 @@
   color: var(--lightTextColor);
 }
 
+.secondary{
+  color: var( --brightBtn);
+}
+
 .icon {
   font-size: 22px;
 }
