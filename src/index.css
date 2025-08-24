@@ -24,19 +24,23 @@ body {
   margin: 0 auto;
 }
 
+/* один раз глобально, але краще дублювати на бейджах */
 html {
-  font-variant-numeric: lining-nums;
+  -webkit-text-size-adjust: 100%; /* iOS не «перераховує» висоту рядка */
+  font-variant-numeric: lining-nums; /* прямі цифри */
 }
 
-.badge,
-.stat {
+/* конкретно для бейджів/статів */
+.badge, .stat {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  line-height: 1;                        /* однакова висота рядка */
   font-variant-numeric: lining-nums tabular-nums;
-}
-
-.badge,
-.stat {
   font-feature-settings: "lnum" 1, "tnum" 1;
 }
+.badge * { line-height: 1; }             /* усередині теж фіксуємо */
+
 
 body {
   max-width: 1440px;

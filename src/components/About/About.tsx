@@ -141,76 +141,63 @@ export default function About() {
 
       {/* DETAILS */}
       <ul className={s.details}>
-        <Slide direction='up' cascade damping={0.09} triggerOnce={false}>
-          <li className={s.detailsItem}>
-            <span>👨🏻</span>29 years old
-          </li>
-          <li className={s.detailsItem}>
-            <span>
-              <img
-                src='https://em-content.zobj.net/thumbs/120/apple/354/flag-ukraine_1f1fa-1f1e6.png'
-                alt='Ukrainian flag'
-                width={24}
-                height={24}
-              />
-            </span>{" "}
-            Ukraine
-          </li>
-          <li className={s.detailsItem}>
-            <span>
-              <img
-                src='https://em-content.zobj.net/thumbs/120/apple/354/flag-ukraine_1f1fa-1f1e6.png'
-                alt='Ukrainian flag'
-                width={24}
-                height={24}
-              />
-              <img
-                src='https://em-content.zobj.net/thumbs/120/apple/354/flag-united-kingdom_1f1ec-1f1e7.png'
-                alt='United Kingdom flag'
-                width={24}
-                height={24}
-              />
-              <img
-                src='https://em-content.zobj.net/thumbs/120/apple/354/flag-poland_1f1f5-1f1f1.png'
-                alt='Polish flag'
-                width={24}
-                height={24}
-              />
-              <img
-                src='https://em-content.zobj.net/thumbs/120/apple/354/flag-russia_1f1f7-1f1fa.png'
-                alt='russian flag'
-                width={24}
-                height={24}
-              />{" "}
-              <img
-                src='https://em-content.zobj.net/thumbs/120/apple/354/flag-spain_1f1ea-1f1f8.png'
-                alt='Spanish flag'
-                width={24}
-                height={24}
-              />
-            </span>
-            Languages
-          </li>
-          <li className={s.detailsItem}>
-            <span>📍</span>Based in Reykjavik, Iceland
-          </li>
-          <li className={s.detailsItem}>
-            <span>🎓</span>ONU Mechnikov
-          </li>
-          <li className={s.detailsItem}>
-            <span>🌍🧑‍💻</span>Freelancer / Looking for a job
-          </li>
-          <li className={s.detailsItem}>
-            <span>⏳🚀</span>1,5 years
-          </li>
-          <li className={s.detailsItem}>
-            <span>⚽️🥊🏀🎮🎬✈️🏋🏻‍♂️</span>Hobbies
-          </li>
-          <li className={s.detailsItem}>
-            <span>💻🛠️</span>9+ Projects
-          </li>
-        </Slide>
-      </ul>
+  <Slide direction='up' cascade damping={0.09} triggerOnce={false}>
+    <li className={s.detailsItem}>
+      <span className={s.emoji} aria-hidden>👨🏻</span>
+      <span className={s.num}>29</span>&nbsp;years old
+    </li>
+
+    <li className={s.detailsItem}>
+      <span className={s.flags}>
+        <img className={s.flag} src='…/flag-ukraine.png' alt='Ukrainian flag' />
+      </span>
+      Ukraine
+    </li>
+
+    <li className={s.detailsItem}>
+      <span className={s.flags}>
+        <img className={s.flag} src='…/flag-ukraine.png' alt='UA' />
+        <img className={s.flag} src='…/flag-united-kingdom.png' alt='UK' />
+        <img className={s.flag} src='…/flag-poland.png' alt='PL' />
+        <img className={s.flag} src='…/flag-russia.png' alt='RU' />
+        <img className={s.flag} src='…/flag-spain.png' alt='ES' />
+      </span>
+      Languages
+    </li>
+
+    <li className={s.detailsItem}>
+      <span className={s.emoji} aria-hidden>📍</span>
+      Based in Reykjavik, Iceland
+    </li>
+
+    <li className={s.detailsItem}>
+      <span className={s.emoji} aria-hidden>🎓</span>
+      ONU Mechnikov
+    </li>
+
+    <li className={s.detailsItem}>
+      <span className={s.emoji} aria-hidden>🌍🧑‍💻</span>
+      Freelancer / Looking for a job
+    </li>
+
+    <li className={s.detailsItem}>
+      <span className={s.emoji} aria-hidden>⏳🚀</span>
+      <span className={s.num}>1.5</span>&nbsp;years
+      {/* краще крапка ніж кома, щоб не було роздільника тисяч у деяких локалях */}
+    </li>
+
+    <li className={s.detailsItem}>
+      <span className={s.emoji} aria-hidden>⚽️🥊🏀🎮🎬✈️🏋🏻‍♂️</span>
+      Hobbies
+    </li>
+
+    <li className={s.detailsItem}>
+      <span className={s.emoji} aria-hidden>💻🛠️</span>
+      <span className={s.num}>9+</span>&nbsp;Projects
+    </li>
+  </Slide>
+</ul>
+
       <WhatCanIDo />
     </section>
   );

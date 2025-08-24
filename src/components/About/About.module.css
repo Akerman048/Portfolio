@@ -198,7 +198,8 @@
   transition: transform 0.6s ease-in-out;
 }
 
-/* ABOUT DETAILS */
+
+/* ABOUT DETAILS  */
 
 .details {
   display: flex;
@@ -213,26 +214,68 @@
   gap: 10px;
   padding: 10px 20px;
   border-radius: 20px;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
   background-color: var(--darkBgAccent);
-  transition: .3s ;
+  transition: .3s;
+
+  font-family: inherit;
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
 }
 
-.detailsItem span{
-  display: flex;
+.detailsItem > span:first-child {
+  display: inline-flex;
+  align-items: center;
   gap: 5px;
   padding-right: 10px;
   color: var(--darkTextColor);
   border-right: 1px solid rgba(47, 70, 117, 0.547);
 }
 
-.detailsItem:hover{
+.detailsItem:hover {
   background-color: var(--darkBgAccentHover);
   transform: scale(1.1);
 }
 
 .detailsItem span {
   font-size: 18px;
+}
+
+.emoji {
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji";
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.flags { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 6px; 
+  line-height: 1; 
+}
+.flag { 
+  width: 24px; 
+  height: 24px; 
+  display: block; 
+}
+
+.num {
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+}
+
+/*  responsive  */
+@media (max-width: 768px) {
+  .details {
+    gap: 10px;
+    justify-content: center;
+  }
+  .detailsItem {
+    gap: 10px;
+    padding: 6px 12px;
+  }
 }
 
 
