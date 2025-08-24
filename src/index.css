@@ -12,6 +12,15 @@ html, body { overflow-x: hidden; }          /* fallback */
   margin: 0 auto;
 }
 
+
+html { font-variant-numeric: lining-nums; }
+
+.badge, .stat { font-variant-numeric: lining-nums tabular-nums; }
+
+
+.badge, .stat { font-feature-settings: "lnum" 1, "tnum" 1; }
+
+
 body {
   max-width: 1440px;
   width: 100%;
