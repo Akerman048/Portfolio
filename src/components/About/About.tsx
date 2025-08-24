@@ -10,70 +10,9 @@ import { LuSparkles } from "react-icons/lu";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { FaCode } from "react-icons/fa6";
 import WhatCanIDo from "../WhatCanIDo/WhatCanIDo";
-import { useEffect, useState } from "react";
 
-const detailsData = [
-  { icon: "👨🏻", text: "29 years old" },
-  {
-    icon: (
-      <img
-        src='https://em-content.zobj.net/thumbs/120/apple/354/flag-ukraine_1f1fa-1f1e6.png'
-        alt='Ukrainian flag'
-        width={24}
-        height={24}
-      />
-    ),
-    text: "Ukraine",
-  },
-  {
-    icon: (
-      <>
-        <img
-          src='https://em-content.zobj.net/thumbs/120/apple/354/flag-ukraine_1f1fa-1f1e6.png'
-          alt='UA'
-          width={24}
-        />
-        <img
-          src='https://em-content.zobj.net/thumbs/120/apple/354/flag-united-kingdom_1f1ec-1f1e7.png'
-          alt='UK'
-          width={24}
-        />
-        <img
-          src='https://em-content.zobj.net/thumbs/120/apple/354/flag-poland_1f1f5-1f1f1.png'
-          alt='PL'
-          width={24}
-        />
-        <img
-          src='https://em-content.zobj.net/thumbs/120/apple/354/flag-russia_1f1f7-1f1fa.png'
-          alt='RU'
-          width={24}
-        />
-        <img
-          src='https://em-content.zobj.net/thumbs/120/apple/354/flag-spain_1f1ea-1f1f8.png'
-          alt='ES'
-          width={24}
-        />
-      </>
-    ),
-    text: "Languages",
-  },
-  { icon: "📍", text: "Based in Reykjavik, Iceland" },
-  { icon: "🎓", text: "ONU Mechnikov" },
-  { icon: "🌍🧑‍💻", text: "Freelancer / Looking for a job" },
-  { icon: "⏳🚀", text: "1.5 years" },
-  { icon: "⚽️🥊🏀🎮🎬✈️🏋🏻‍♂️", text: "Hobbies" },
-  { icon: "💻🛠️", text: "9+ Projects" },
-];
 
 export default function About() {
-  const [,setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % detailsData.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
 
 
 
@@ -238,8 +177,7 @@ export default function About() {
     <li className={s.detailsItem}>
       <span className={s.emoji} aria-hidden>⏳🚀</span>
       <span className={s.num}>1.5</span>&nbsp;years
-      {/* краще крапка ніж кома, щоб не було роздільника тисяч у деяких локалях */}
-    </li>
+      </li>
 
     <li className={s.detailsItem}>
       <span className={s.emoji} aria-hidden>⚽️🥊🏀🎮🎬✈️🏋🏻‍♂️</span>
