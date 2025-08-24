@@ -148,22 +148,77 @@ export default function About() {
     </li>
 
     <li className={s.detailsItem}>
-      <span className={s.flags}>
-        <img className={s.flag} src='…/flag-ukraine.png' alt='Ukrainian flag' />
-      </span>
-      Ukraine
-    </li>
+  <span className={s.flags}>
+    <img
+      className={s.flag}
+      src="https://em-content.zobj.net/thumbs/120/apple/354/flag-ukraine_1f1fa-1f1e6.png"
+      alt="Ukrainian flag"
+      width={24}
+      height={24}
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+    />
+  </span>
+  Ukraine
+</li>
 
-    <li className={s.detailsItem}>
-      <span className={s.flags}>
-        <img className={s.flag} src='…/flag-ukraine.png' alt='UA' />
-        <img className={s.flag} src='…/flag-united-kingdom.png' alt='UK' />
-        <img className={s.flag} src='…/flag-poland.png' alt='PL' />
-        <img className={s.flag} src='…/flag-russia.png' alt='RU' />
-        <img className={s.flag} src='…/flag-spain.png' alt='ES' />
-      </span>
-      Languages
-    </li>
+<li className={s.detailsItem}>
+  <span className={s.flags}>
+    <img
+      className={s.flag}
+      src="https://em-content.zobj.net/thumbs/120/apple/354/flag-ukraine_1f1fa-1f1e6.png"
+      alt="UA"
+      width={24}
+      height={24}
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+    />
+    <img
+      className={s.flag}
+      src="https://em-content.zobj.net/thumbs/120/apple/354/flag-united-kingdom_1f1ec-1f1e7.png"
+      alt="UK"
+      width={24}
+      height={24}
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+    />
+    <img
+      className={s.flag}
+      src="https://em-content.zobj.net/thumbs/120/apple/354/flag-poland_1f1f5-1f1f1.png"
+      alt="PL"
+      width={24}
+      height={24}
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+    />
+    <img
+      className={s.flag}
+      src="https://em-content.zobj.net/thumbs/120/apple/354/flag-russia_1f1f7-1f1fa.png"
+      alt="RU"
+      width={24}
+      height={24}
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+    />
+    <img
+      className={s.flag}
+      src="https://em-content.zobj.net/thumbs/120/apple/354/flag-spain_1f1ea-1f1f8.png"
+      alt="ES"
+      width={24}
+      height={24}
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+    />
+  </span>
+  Languages
+</li>
+
 
     <li className={s.detailsItem}>
       <span className={s.emoji} aria-hidden>📍</span>
@@ -197,6 +252,7 @@ export default function About() {
     </li>
   </Slide>
 </ul>
+
 
       <WhatCanIDo />
     </section>
