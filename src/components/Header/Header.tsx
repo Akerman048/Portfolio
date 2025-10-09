@@ -22,14 +22,14 @@ export default function Header() {
           <Logo />
         </div>
 
-        {/* центр: тут показується ДЕСКТОПНЕ меню */}
+       
         <div className={s.center}>
-          {/* Navigation сам рендерить desktop-меню інлайн, а мобільне — через портал */}
+         
           <Navigation open={menuOpen} onOpenChange={setMenuOpen} />
         </div>
 
         <div className={s.right}>
-          {/* бургер тільки на мобайлі; ховаємо коли меню відкрито */}
+         
           {!menuOpen && (
             <button
               className={s.headerBurger}

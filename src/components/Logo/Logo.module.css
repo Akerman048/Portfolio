@@ -1,0 +1,3 @@
+.myName{
+    font-size: clamp(18px, 2vw, 48px);
+}

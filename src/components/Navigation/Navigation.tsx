@@ -27,7 +27,7 @@ export default function Navigation({ open, onOpenChange }: Props) {
 
   return (
     <>
-      {/* === ДЕСКТОПНЕ МЕНЮ (інлайн, по центру хедера) === */}
+      
       <ul className={s.desktopMenu} aria-label="Primary">
         <li><Item to="home" label="Home" /></li>
         <li><Item to="about" label="About" /></li>
@@ -35,7 +35,7 @@ export default function Navigation({ open, onOpenChange }: Props) {
         <li><Item to="contact" label="Contact" /></li>
       </ul>
 
-      {/* === МОБІЛЬНЕ МЕНЮ (портал у <body>) === */}
+     
       {createPortal(
         <div
           className={`${s.overlay} ${open ? s.show : ""}`}
