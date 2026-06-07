@@ -56,13 +56,13 @@ src/
 Clone the repository:
 
 ```bash
-git clone your_repository_url
+git clone https://github.com/Akerman048/Portfolio
 ```
 
 Navigate to the project:
 
 ```bash
-cd your_project_name
+cd Portfolio
 ```
 
 Install dependencies:
